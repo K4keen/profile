@@ -54,23 +54,23 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen bg-white py-32">
+    <section id="projects" className="min-h-screen bg-primary-light/30 py-32">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8">
+          <h2 className="text-5xl md:text-6xl font-bold text-primary-dark mb-8">
             我的项目
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             以下是我参与开发的一些项目，展示了我在不同技术栈和领域的经验
           </p>
-          <div className="w-24 h-1 bg-orange-400 mx-auto mt-8"></div>
+
         </div>
 
         <div className="space-y-16">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300"
+              className="bg-white rounded-xl overflow-hidden border border-primary-medium/20 hover:shadow-lg transition-all duration-300"
             >
               <div className="md:flex">
                 <div className="md:w-1/2 p-8">
@@ -82,12 +82,12 @@ const ProjectsSection: React.FC = () => {
                 </div>
                 <div className="md:w-1/2 p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-slate-800">
+                    <h3 className="text-2xl font-bold text-primary-dark">
                       {project.title}
                     </h3>
                     <button
                       onClick={() => toggleProject(project.id)}
-                      className="text-orange-400 hover:text-orange-600 transition-colors duration-200"
+                      className="text-primary-blue hover:text-primary-dark transition-colors duration-200"
                     >
                       {expandedProject === project.id ? (
                         <ChevronUp size={24} />
@@ -97,13 +97,13 @@ const ProjectsSection: React.FC = () => {
                     </button>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-primary-blue mb-4">
                     {project.description}
                   </p>
 
                   {expandedProject === project.id && (
-                    <div className="mb-4 p-4 bg-gray-50 rounded-lg">
-                      <p className="text-gray-700 leading-relaxed">
+                    <div className="mb-4 p-4 bg-primary-light/20 rounded-lg">
+                      <p className="text-primary-blue leading-relaxed">
                         {project.fullDescription}
                       </p>
                     </div>
@@ -113,7 +113,7 @@ const ProjectsSection: React.FC = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-primary-medium/20 text-primary-blue rounded-full text-sm font-medium"
                       >
                         {tech}
                       </span>
@@ -126,7 +126,7 @@ const ProjectsSection: React.FC = () => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors duration-200"
+                        className="flex items-center gap-2 px-4 py-2 bg-primary-blue text-white rounded-lg hover:bg-primary-dark transition-colors duration-200"
                       >
                         <ExternalLink size={16} />
                         查看演示
@@ -137,7 +137,7 @@ const ProjectsSection: React.FC = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors duration-200"
+                        className="flex items-center gap-2 px-4 py-2 border border-primary-medium/30 text-primary-blue rounded-lg hover:bg-primary-light/20 transition-colors duration-200"
                       >
                         <Github size={16} />
                         源代码

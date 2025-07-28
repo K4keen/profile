@@ -38,12 +38,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e67e22;
+  background: #0F4C75;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d35400;
+  background: #1B262C;
 }
 
 /* Smooth transitions for all elements */
@@ -53,7 +53,7 @@ html {
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #e67e22;
+  outline: 2px solid #0F4C75;
   outline-offset: 2px;
 }
 

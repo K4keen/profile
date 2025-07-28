@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Code, Palette, Rocket } from 'lucide-react';
 
 // Hero Section Component
 const HeroSection: React.FC = () => {
+  const [currentSubtitle, setCurrentSubtitle] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const subtitles = [
+    "欢迎来到我的个人网站",
+    "全栈开发工程师",
+    "技术爱好者",
+    "创新思维者"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentSubtitle((prev) => (prev + 1) % subtitles.length);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [subtitles.length]);
+
   return (
-    <section className="min-h-screen bg-slate-800 text-white flex items-center justify-center">
-      <div className="text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8">
-          你好，我是 <span className="text-orange-400">Arthur</span>
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light via-white to-primary-medium/30">
+      <div className="text-center px-4">
+        <h1 className="text-6xl md:text-8xl font-bold text-primary-dark mb-6">
+          你好，我是 <span className="text-primary-blue">Arthur</span>
         </h1>
-        <p className="text-xl md:text-3xl text-gray-300 mb-12">
-          全栈开发工程师 & 技术爱好者
+        <p className={`text-xl md:text-2xl text-primary-blue max-w-2xl mx-auto transition-opacity duration-500 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}>
+          {subtitles[currentSubtitle]}
         </p>
-        <div className="w-32 h-1 bg-orange-400 mx-auto"></div>
       </div>
     </section>
   );
@@ -43,19 +66,19 @@ const AboutSection: React.FC = () => {
       <section id="about" className="min-h-screen bg-white py-32">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8">
+            <h2 className="text-5xl md:text-6xl font-bold text-primary-dark mb-8">
               关于我
             </h2>
-            <div className="w-24 h-1 bg-orange-400 mx-auto"></div>
+
           </div>
 
           <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-primary-blue leading-relaxed">
                 我是一名充满热情的全栈开发工程师，专注于创建优雅、高效的数字解决方案。
                 拥有多年的开发经验，熟练掌握现代Web技术栈，致力于将创意转化为现实。
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-primary-blue leading-relaxed">
                 我相信技术的力量能够改变世界，通过代码创造价值是我的使命。
                 在工作之余，我喜欢探索新技术、参与开源项目，并与技术社区分享知识。
               </p>
@@ -63,7 +86,7 @@ const AboutSection: React.FC = () => {
                 {['React', 'TypeScript', 'Node.js', 'Python', 'Docker', 'AWS'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium"
+                    className="px-4 py-2 bg-primary-medium/20 text-primary-blue rounded-full text-sm font-medium"
                   >
                     {tech}
                   </span>
@@ -73,11 +96,11 @@ const AboutSection: React.FC = () => {
             
             <div className="relative">
               <div className="w-80 h-80 mx-auto relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-medium to-primary-blue rounded-full opacity-20 animate-pulse"></div>
                 <img
                   src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20portrait%20of%20a%20young%20software%20developer%2C%20clean%20background%2C%20modern%20style%2C%20confident%20expression&image_size=square_hd"
                   alt="个人照片"
-                  className="w-full h-full object-cover rounded-full border-4 border-orange-400/30"
+                  className="w-full h-full object-cover rounded-full border-4 border-primary-medium/30"
                 />
               </div>
             </div>
@@ -89,11 +112,11 @@ const AboutSection: React.FC = () => {
                 key={index}
                 className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 border border-gray-200"
               >
-                <div className="text-orange-400 mb-4">
+                <div className="text-primary-medium mb-4">
                   {skill.icon}
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-slate-800">{skill.title}</h4>
-                <p className="text-gray-600">{skill.description}</p>
+                <h4 className="text-xl font-bold mb-3 text-primary-dark">{skill.title}</h4>
+                <p className="text-primary-blue">{skill.description}</p>
               </div>
             ))}
           </div>
