@@ -10,9 +10,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { id: 'about', label: '关于我' },
-    { id: 'projects', label: '项目展示' },
-    { id: 'contact', label: '联系方式' }
+    { id: 'about', label: 'About' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' }
   ];
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           <div className="flex-shrink-0">
             <h1 className="text-2xl font-bold text-primary-dark cursor-pointer" 
                 onClick={() => scrollToSection('about')}>
-              个人简介
+              Portfolio
             </h1>
           </div>
 
@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 className="flex items-center gap-2 px-4 py-3 bg-primary-blue hover:bg-primary-dark text-white rounded-md text-base font-medium transition-all duration-200 hover:transform hover:scale-105"
               >
                 <Download size={16} />
-                简历
+                Resume
               </a>
             </div>
           </div>
@@ -110,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               className="flex items-center gap-2 w-full px-3 py-2 bg-primary-blue hover:bg-primary-dark text-white rounded-md text-base font-medium transition-colors duration-200"
             >
               <Download size={16} />
-              下载简历
+              Resume
             </a>
           </div>
         </div>

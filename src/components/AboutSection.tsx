@@ -7,10 +7,9 @@ const HeroSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   const subtitles = [
-    "欢迎来到我的个人网站",
-    "全栈开发工程师",
-    "技术爱好者",
-    "创新思维者"
+    'A Full Stack Developer',
+    'A Technology Enthusiast',
+    'An Innovation Thinker'
   ];
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const HeroSection: React.FC = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light via-white to-primary-medium/30">
       <div className="text-center px-4">
         <h1 className="text-6xl md:text-8xl font-bold text-primary-dark mb-6">
-          你好，我是 <span className="text-primary-blue">Arthur</span>
+          Hey, I'm <span className="text-primary-blue">Arthur</span>
         </h1>
         <p className={`text-xl md:text-2xl text-primary-blue max-w-2xl mx-auto transition-opacity duration-500 ${
           isVisible ? 'opacity-100' : 'opacity-0'
@@ -45,18 +44,18 @@ const AboutSection: React.FC = () => {
   const skills = [
     {
       icon: <Code className="w-8 h-8" />,
-      title: '前端开发',
-      description: '精通React、TypeScript、Vue等现代前端技术栈'
+      title: 'Frontend Development',
+      description: 'Proficient in React, TypeScript, Vue and modern frontend tech stack'
     },
     {
       icon: <Palette className="w-8 h-8" />,
-      title: 'UI/UX设计',
-      description: '具备良好的设计审美和用户体验设计能力'
+      title: 'UI/UX Design',
+      description: 'Strong design aesthetics and user experience design capabilities'
     },
     {
       icon: <Rocket className="w-8 h-8" />,
-      title: '项目管理',
-      description: '丰富的项目开发和团队协作经验'
+      title: 'Project Management',
+      description: 'Rich experience in project development and team collaboration'
     }
   ];
 
@@ -67,7 +66,7 @@ const AboutSection: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl font-bold text-primary-dark mb-8">
-              关于我
+              About Me
             </h2>
 
           </div>
@@ -75,12 +74,12 @@ const AboutSection: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
             <div className="space-y-8">
               <p className="text-lg text-primary-blue leading-relaxed">
-                我是一名充满热情的全栈开发工程师，专注于创建优雅、高效的数字解决方案。
-                拥有多年的开发经验，熟练掌握现代Web技术栈，致力于将创意转化为现实。
+                I am a passionate full-stack developer focused on creating elegant and efficient digital solutions.
+                With years of development experience, I am proficient in modern web technology stacks and committed to turning creativity into reality.
               </p>
               <p className="text-lg text-primary-blue leading-relaxed">
-                我相信技术的力量能够改变世界，通过代码创造价值是我的使命。
-                在工作之余，我喜欢探索新技术、参与开源项目，并与技术社区分享知识。
+                I believe in the power of technology to change the world, and creating value through code is my mission.
+                In my spare time, I enjoy exploring new technologies, participating in open source projects, and sharing knowledge with the tech community.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['React', 'TypeScript', 'Node.js', 'Python', 'Docker', 'AWS'].map((tech) => (
@@ -96,10 +95,10 @@ const AboutSection: React.FC = () => {
             
             <div className="relative">
               <div className="w-80 h-80 mx-auto relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-medium to-primary-blue rounded-full opacity-20 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-medium to-primary-blue rounded-full opacity-20"></div>
                 <img
-                  src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20portrait%20of%20a%20young%20software%20developer%2C%20clean%20background%2C%20modern%20style%2C%20confident%20expression&image_size=square_hd"
-                  alt="个人照片"
+                  src="/public/arthur.jpeg"
+                  alt="Profile Photo"
                   className="w-full h-full object-cover rounded-full border-4 border-primary-medium/30"
                 />
               </div>

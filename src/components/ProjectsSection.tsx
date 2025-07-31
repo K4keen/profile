@@ -19,31 +19,31 @@ const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: '电商平台',
-      description: '现代化的电商解决方案，支持多种支付方式和实时库存管理',
-      fullDescription: '这是一个功能完整的电商平台，采用微服务架构设计。前端使用React和TypeScript构建，后端基于Node.js和Express框架。集成了Stripe支付系统、Redis缓存、MongoDB数据库等技术。支持用户注册登录、商品浏览、购物车、订单管理、支付处理等完整的电商流程。',
+      title: 'E-commerce Platform',
+      description: 'Modern e-commerce solution with multiple payment methods and real-time inventory management',
+      fullDescription: 'This is a fully functional e-commerce platform designed with microservices architecture. The frontend is built with React and TypeScript, and the backend is based on Node.js and Express framework. It integrates Stripe payment system, Redis cache, MongoDB database and other technologies. It supports complete e-commerce processes including user registration and login, product browsing, shopping cart, order management, and payment processing.',
       technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Redis', 'Stripe'],
-      videoId: 'dQw4w9WgXcQ', // 示例视频ID，可替换为实际项目演示视频
+      videoId: 'dQw4w9WgXcQ', // Example video ID, can be replaced with actual project demo video
       demoUrl: 'https://demo-ecommerce.example.com',
       githubUrl: 'https://github.com/example/ecommerce'
     },
     {
       id: 2,
-      title: '任务管理系统',
-      description: '团队协作的任务管理工具，支持实时同步和多人协作',
-      fullDescription: '一个专为团队协作设计的任务管理系统。采用实时通信技术，支持多人同时编辑和协作。具备任务分配、进度跟踪、时间管理、文件共享等功能。使用Vue.js构建前端界面，后端采用Python Flask框架，数据库使用PostgreSQL，并集成了WebSocket实现实时通信。',
+      title: 'Task Management System',
+      description: 'Team collaboration task management tool with real-time synchronization and multi-user collaboration',
+      fullDescription: 'A task management system designed specifically for team collaboration. It uses real-time communication technology to support simultaneous editing and collaboration by multiple users. It features task assignment, progress tracking, time management, file sharing and other functions. The frontend interface is built with Vue.js, the backend uses Python Flask framework, the database uses PostgreSQL, and WebSocket is integrated for real-time communication.',
       technologies: ['Vue.js', 'Python', 'Flask', 'PostgreSQL', 'WebSocket', 'Docker'],
-      videoId: 'dQw4w9WgXcQ', // 示例视频ID，可替换为实际项目演示视频
+      videoId: 'dQw4w9WgXcQ', // Example video ID, can be replaced with actual project demo video
       demoUrl: 'https://demo-taskmanager.example.com',
       githubUrl: 'https://github.com/example/taskmanager'
     },
     {
       id: 3,
-      title: '数据可视化平台',
-      description: '企业级数据分析和可视化解决方案，支持多种图表类型',
-      fullDescription: '企业级的数据可视化平台，能够处理大量数据并生成各种类型的图表和报告。支持实时数据更新、自定义仪表板、数据导出等功能。前端使用React和D3.js构建交互式图表，后端采用Node.js和Express，数据处理使用Python和Pandas，支持多种数据源接入。',
+      title: 'Data Visualization Platform',
+      description: 'Enterprise-level data analysis and visualization solution supporting multiple chart types',
+      fullDescription: 'An enterprise-level data visualization platform that can process large amounts of data and generate various types of charts and reports. It supports real-time data updates, custom dashboards, data export and other functions. The frontend uses React and D3.js to build interactive charts, the backend uses Node.js and Express, data processing uses Python and Pandas, and supports access to multiple data sources.',
       technologies: ['React', 'D3.js', 'Node.js', 'Python', 'Pandas', 'MySQL'],
-      videoId: 'dQw4w9WgXcQ', // 示例视频ID，可替换为实际项目演示视频
+      videoId: 'dQw4w9WgXcQ', // Example video ID, can be replaced with actual project demo video
       demoUrl: 'https://demo-dataviz.example.com',
       githubUrl: 'https://github.com/example/dataviz'
     }
@@ -58,10 +58,10 @@ const ProjectsSection: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold text-primary-dark mb-8">
-            我的项目
+            My Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            以下是我参与开发的一些项目，展示了我在不同技术栈和领域的经验
+            Here are some projects I have participated in developing
           </p>
 
         </div>
@@ -76,7 +76,7 @@ const ProjectsSection: React.FC = () => {
                 <div className="md:w-1/2 p-8">
                   <YouTubePlayer
                     videoId={project.videoId}
-                    title={`${project.title} 演示视频`}
+                    title={`${project.title} Demo Video`}
                     className="mb-4"
                   />
                 </div>
@@ -129,7 +129,7 @@ const ProjectsSection: React.FC = () => {
                         className="flex items-center gap-2 px-4 py-2 bg-primary-blue text-white rounded-lg hover:bg-primary-dark transition-colors duration-200"
                       >
                         <ExternalLink size={16} />
-                        查看演示
+                        View Demo
                       </a>
                     )}
                     {project.githubUrl && (
@@ -140,7 +140,7 @@ const ProjectsSection: React.FC = () => {
                         className="flex items-center gap-2 px-4 py-2 border border-primary-medium/30 text-primary-blue rounded-lg hover:bg-primary-light/20 transition-colors duration-200"
                       >
                         <Github size={16} />
-                        源代码
+                        Source Code
                       </a>
                     )}
                   </div>

@@ -5,12 +5,12 @@ const ContactSection: React.FC = () => {
   const contactLinks = [
     {
       icon: <Mail className="w-16 h-16" />,
-      link: 'mailto:arthur@example.com',
+      link: 'mailto:arthurkan@163.com',
       color: 'hover:text-red-400'
     },
     {
       icon: <Phone className="w-16 h-16" />,
-      link: 'tel:+8613800000000',
+      link: 'tel:+1 604-368-9428',
       color: 'hover:text-green-400'
     },
     {
@@ -20,7 +20,7 @@ const ContactSection: React.FC = () => {
     },
     {
       icon: <Linkedin className="w-16 h-16" />,
-      link: 'https://linkedin.com/in/arthur-kan',
+      link: 'https://www.linkedin.com/in/arthurkan/',
       color: 'hover:text-blue-400'
     }
   ];
@@ -29,11 +29,11 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="py-32 pb-32 bg-white ">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-center text-primary-dark mb-16">
-          联系我
+          Contact Me
         </h2>
         <div className="text-center mb-20">
           <p className="text-xl text-primary-blue max-w-3xl mx-auto">
-            如果您对我的工作感兴趣，或者想要讨论合作机会，欢迎随时联系我
+            If you are interested in my work or would like to discuss collaboration opportunities, feel free to contact me anytime
           </p>
 
         </div>
