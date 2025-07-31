@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Github, Linkedin, Phone } from 'lucide-react';
+import ContactButton from './ui/ContactButton';
 
 const ContactSection: React.FC = () => {
   const contactLinks = [
@@ -40,17 +41,13 @@ const ContactSection: React.FC = () => {
 
         <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
           {contactLinks.map((contact, index) => (
-            <a
+            <ContactButton
               key={index}
-              href={contact.link}
-              target={contact.link.startsWith('http') ? '_blank' : '_self'}
-              rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className={`group bg-primary-light p-8 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-110 hover:shadow-xl flex items-center justify-center border border-primary-medium/20 ${contact.color}`}
-            >
-              <div className="text-primary-blue group-hover:scale-125 transition-all duration-300">
-                {contact.icon}
-              </div>
-            </a>
+              icon={contact.icon}
+              link={contact.link}
+              hoverColor={contact.color}
+              ariaLabel={`Contact via ${contact.link.includes('mailto') ? 'email' : contact.link.includes('tel') ? 'phone' : contact.link.includes('github') ? 'GitHub' : 'LinkedIn'}`}
+            />
           ))}
         </div>
 

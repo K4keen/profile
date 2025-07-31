@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
-import YouTubePlayer from './YouTubePlayer';
+import ProjectCard from './ui/ProjectCard';
 
 interface Project {
   id: number;
@@ -68,85 +67,12 @@ const ProjectsSection: React.FC = () => {
 
         <div className="space-y-16">
           {projects.map((project) => (
-            <div
+            <ProjectCard
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden border border-primary-medium/20 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="md:flex">
-                <div className="md:w-1/2 p-8">
-                  <YouTubePlayer
-                    videoId={project.videoId}
-                    title={`${project.title} Demo Video`}
-                    className="mb-4"
-                  />
-                </div>
-                <div className="md:w-1/2 p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-bold text-primary-dark">
-                      {project.title}
-                    </h3>
-                    <button
-                      onClick={() => toggleProject(project.id)}
-                      className="text-primary-blue hover:text-primary-dark transition-colors duration-200"
-                    >
-                      {expandedProject === project.id ? (
-                        <ChevronUp size={24} />
-                      ) : (
-                        <ChevronDown size={24} />
-                      )}
-                    </button>
-                  </div>
-                  
-                  <p className="text-primary-blue mb-4">
-                    {project.description}
-                  </p>
-
-                  {expandedProject === project.id && (
-                    <div className="mb-4 p-4 bg-primary-light/20 rounded-lg">
-                      <p className="text-primary-blue leading-relaxed">
-                        {project.fullDescription}
-                      </p>
-                    </div>
-                  )}
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-primary-medium/20 text-primary-blue rounded-full text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-primary-blue text-white rounded-lg hover:bg-primary-dark transition-colors duration-200"
-                      >
-                        <ExternalLink size={16} />
-                        View Demo
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 border border-primary-medium/30 text-primary-blue rounded-lg hover:bg-primary-light/20 transition-colors duration-200"
-                      >
-                        <Github size={16} />
-                        Source Code
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
+              {...project}
+              isExpanded={expandedProject === project.id}
+              onToggle={toggleProject}
+            />
           ))}
         </div>
       </div>

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Palette, Rocket } from 'lucide-react';
+import SkillCard from './ui/SkillCard';
+import TechTag from './ui/TechTag';
 
 // Hero Section Component
 const HeroSection: React.FC = () => {
@@ -83,12 +85,7 @@ const AboutSection: React.FC = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 {['React', 'TypeScript', 'Node.js', 'Python', 'Docker', 'AWS'].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-4 py-2 bg-primary-medium/20 text-primary-blue rounded-full text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
+                  <TechTag key={tech} text={tech} variant="large" />
                 ))}
               </div>
             </div>
@@ -107,16 +104,12 @@ const AboutSection: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
-              <div
+              <SkillCard
                 key={index}
-                className="bg-gray-50 p-8 rounded-xl hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 border border-gray-200"
-              >
-                <div className="text-primary-medium mb-4">
-                  {skill.icon}
-                </div>
-                <h4 className="text-xl font-bold mb-3 text-primary-dark">{skill.title}</h4>
-                <p className="text-primary-blue">{skill.description}</p>
-              </div>
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+              />
             ))}
           </div>
         </div>
