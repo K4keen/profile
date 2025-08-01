@@ -23,10 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Trae AI generated files
 .trae/
 *.trae
 
-# Vercel files
 vercel.json
 .vercel/
