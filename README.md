@@ -1,57 +1,56 @@
-# React + TypeScript + Vite
+# Arthur Kan - Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, responsive personal portfolio website showcasing my journey as a junior full-stack developer
 
-Currently, two official plugins are available:
+## 📱 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 **Website**: [Visit my portfolio](https://your-portfolio-url.vercel.app)
 
-## Expanding the ESLint configuration
+## 👨‍💻 About Me
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Hi! I'm **Arthur Kan**, a Business and Computer Science student at the University of British Columbia (Class of 2027). As an aspiring full-stack developer, I'm passionate about creating innovative solutions and learning new technologies.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 🎓 Background
+- **Education**: Major in Business and Computer Science at UBC
+- **Current Role**: Cybersecurity & IT Operations Intern at Allianz Group, Shanghai
+- **Experience**: Working with enterprise-grade security solutions and network infrastructure
+- **Focus**: Full-stack development and business technology integration
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 About This Project
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This personal portfolio website is one of my projects as a junior full-stack developer. It represents my journey in web development and showcases my growing skills in modern web technologies.
 
-export default tseslint.config({
-  extends: [
-    // other configs...
-    // Enable lint rules for React
-    reactX.configs['recommended-typescript'],
-    // Enable lint rules for React DOM
-    reactDom.configs.recommended,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### ✨ Features
+
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Interactive Elements**: Dynamic navigation, animated text transitions
+- **Project Showcase**: Highlighting my technical projects and achievements
+- **Contact Integration**: Easy ways to connect and collaborate
+- **Resume Download**: Direct access to my latest resume
+
+### 🛠️ Tech Stack
+
+**Frontend:**
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Vite for fast development and building
+- Lucide React for icons
+
+**Development Tools:**
+- ESLint for code quality
+- PostCSS for CSS processing
+- Responsive design principles
+- Git for version control
+
+## 🤝 Connect With Me
+
+I'm always open to discussing new opportunities, collaborating on interesting projects, or just having a chat about technology and innovation. Feel free to reach out!
+
+---
+
+*This portfolio represents my growth as a developer and my commitment to continuous learning in the ever-evolving world of technology.*
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
